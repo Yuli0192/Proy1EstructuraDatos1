@@ -36,11 +36,14 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/anuncio.o \
+	${OBJECTDIR}/anuncioContratado.o \
 	${OBJECTDIR}/canal.o \
 	${OBJECTDIR}/listaAnuncio.o \
+	${OBJECTDIR}/listaAnuncioContratado.o \
 	${OBJECTDIR}/listaCanal.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/nodoAnuncio.o \
+	${OBJECTDIR}/nodoAnuncioContratado.o \
 	${OBJECTDIR}/nodoCanal.o
 
 
@@ -73,6 +76,11 @@ ${OBJECTDIR}/anuncio.o: anuncio.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/anuncio.o anuncio.cpp
 
+${OBJECTDIR}/anuncioContratado.o: anuncioContratado.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/anuncioContratado.o anuncioContratado.cpp
+
 ${OBJECTDIR}/canal.o: canal.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -82,6 +90,11 @@ ${OBJECTDIR}/listaAnuncio.o: listaAnuncio.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/listaAnuncio.o listaAnuncio.cpp
+
+${OBJECTDIR}/listaAnuncioContratado.o: listaAnuncioContratado.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/listaAnuncioContratado.o listaAnuncioContratado.cpp
 
 ${OBJECTDIR}/listaCanal.o: listaCanal.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -97,6 +110,11 @@ ${OBJECTDIR}/nodoAnuncio.o: nodoAnuncio.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/nodoAnuncio.o nodoAnuncio.cpp
+
+${OBJECTDIR}/nodoAnuncioContratado.o: nodoAnuncioContratado.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/nodoAnuncioContratado.o nodoAnuncioContratado.cpp
 
 ${OBJECTDIR}/nodoCanal.o: nodoCanal.cpp 
 	${MKDIR} -p ${OBJECTDIR}

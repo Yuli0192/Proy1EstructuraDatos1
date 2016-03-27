@@ -30,7 +30,5 @@ public:
     void insertarAnuncio(Anuncio anuncio); //Modificadora
 };
 
-
-
 #endif /* LISTAANUNCIO_H */
 
