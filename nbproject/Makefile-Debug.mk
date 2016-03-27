@@ -35,10 +35,13 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/listaEnt.o \
+	${OBJECTDIR}/anuncio.o \
+	${OBJECTDIR}/canal.o \
+	${OBJECTDIR}/listaAnuncio.o \
+	${OBJECTDIR}/listaCanal.o \
 	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/nodoEntero.o \
-	${OBJECTDIR}/pilaEnt.o
+	${OBJECTDIR}/nodoAnuncio.o \
+	${OBJECTDIR}/nodoCanal.o
 
 
 # C Compiler Flags
@@ -59,31 +62,46 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/tareaestructuras.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/proy1estructuradatos1.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/tareaestructuras.exe: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/proy1estructuradatos1.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/tareaestructuras ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/proy1estructuradatos1 ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/listaEnt.o: listaEnt.cpp 
+${OBJECTDIR}/anuncio.o: anuncio.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/listaEnt.o listaEnt.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/anuncio.o anuncio.cpp
+
+${OBJECTDIR}/canal.o: canal.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/canal.o canal.cpp
+
+${OBJECTDIR}/listaAnuncio.o: listaAnuncio.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/listaAnuncio.o listaAnuncio.cpp
+
+${OBJECTDIR}/listaCanal.o: listaCanal.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/listaCanal.o listaCanal.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
-${OBJECTDIR}/nodoEntero.o: nodoEntero.cpp 
+${OBJECTDIR}/nodoAnuncio.o: nodoAnuncio.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/nodoEntero.o nodoEntero.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/nodoAnuncio.o nodoAnuncio.cpp
 
-${OBJECTDIR}/pilaEnt.o: pilaEnt.cpp 
+${OBJECTDIR}/nodoCanal.o: nodoCanal.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/pilaEnt.o pilaEnt.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/nodoCanal.o nodoCanal.cpp
 
 # Subprojects
 .build-subprojects:
@@ -91,7 +109,7 @@ ${OBJECTDIR}/pilaEnt.o: pilaEnt.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/tareaestructuras.exe
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/proy1estructuradatos1.exe
 
 # Subprojects
 .clean-subprojects:

@@ -1,10 +1,14 @@
-build/Debug/Cygwin-Windows/main.o: main.cpp listaEnt.h NodoEntero.h \
- pilaEnt.h nodoEntero.h
+build/Debug/Cygwin-Windows/main.o: main.cpp listaCanal.h NodoCanal.h \
+ canal.h listaAnuncio.h NodoAnuncio.h anuncio.h
 
-listaEnt.h:
+listaCanal.h:
 
-NodoEntero.h:
+NodoCanal.h:
 
-pilaEnt.h:
+canal.h:
 
-nodoEntero.h:
+listaAnuncio.h:
+
+NodoAnuncio.h:
+
+anuncio.h:

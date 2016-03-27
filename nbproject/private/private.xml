@@ -7,13 +7,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Yuli/Documents/WorkspaceC++/TareaEstructuras/listaEnt.cpp</file>
-            <file>file:/C:/Users/Yuli/Documents/WorkspaceC++/TareaEstructuras/listaEnt.h</file>
-            <file>file:/C:/Users/Yuli/Documents/WorkspaceC++/TareaEstructuras/nodoEntero.h</file>
-            <file>file:/C:/Users/Yuli/Documents/WorkspaceC++/TareaEstructuras/main.cpp</file>
-            <file>file:/C:/Users/Yuli/Documents/WorkspaceC++/TareaEstructuras/pilaEnt.cpp</file>
-            <file>file:/C:/Users/Yuli/Documents/WorkspaceC++/TareaEstructuras/pilaEnt.h</file>
-            <file>file:/C:/Users/Yuli/Documents/WorkspaceC++/TareaEstructuras/nodoEntero.cpp</file>
+            <file>file:/C:/Users/Yuli/Documents/WorkspaceC++/proy1EstructuraDatos1/listaAnuncio.cpp</file>
+            <file>file:/C:/Users/Yuli/Documents/WorkspaceC++/proy1EstructuraDatos1/canal.h</file>
+            <file>file:/C:/Users/Yuli/Documents/WorkspaceC++/proy1EstructuraDatos1/canal.cpp</file>
+            <file>file:/C:/Users/Yuli/Documents/WorkspaceC++/proy1EstructuraDatos1/nodoAnuncio.cpp</file>
+            <file>file:/C:/Users/Yuli/Documents/WorkspaceC++/proy1EstructuraDatos1/pilaEnt.h</file>
+            <file>file:/C:/Users/Yuli/Documents/WorkspaceC++/proy1EstructuraDatos1/listaAnuncio.h</file>
+            <file>file:/C:/Users/Yuli/Documents/WorkspaceC++/proy1EstructuraDatos1/nodoAnuncio.h</file>
+            <file>file:/C:/Users/Yuli/Documents/WorkspaceC++/proy1EstructuraDatos1/nodoCanal.h</file>
+            <file>file:/C:/Users/Yuli/Documents/WorkspaceC++/proy1EstructuraDatos1/anuncio.h</file>
         </group>
     </open-files>
 </project-private>

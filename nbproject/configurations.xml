@@ -4,16 +4,22 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>listaEnt.h</itemPath>
-      <itemPath>nodoEntero.h</itemPath>
-      <itemPath>pilaEnt.h</itemPath>
+      <itemPath>anuncio.h</itemPath>
+      <itemPath>canal.h</itemPath>
+      <itemPath>listaAnuncio.h</itemPath>
+      <itemPath>listaCanal.h</itemPath>
+      <itemPath>nodoAnuncio.h</itemPath>
+      <itemPath>nodoCanal.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
                    projectFiles="true">
-      <itemPath>listaEnt.cpp</itemPath>
-      <itemPath>nodoEntero.cpp</itemPath>
-      <itemPath>pilaEnt.cpp</itemPath>
+      <itemPath>anuncio.cpp</itemPath>
+      <itemPath>canal.cpp</itemPath>
+      <itemPath>listaAnuncio.cpp</itemPath>
+      <itemPath>listaCanal.cpp</itemPath>
+      <itemPath>nodoAnuncio.cpp</itemPath>
+      <itemPath>nodoCanal.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
@@ -42,19 +48,31 @@
       </toolsSet>
       <compileType>
       </compileType>
-      <item path="listaEnt.cpp" ex="false" tool="1" flavor2="0">
+      <item path="anuncio.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="listaEnt.h" ex="false" tool="3" flavor2="0">
+      <item path="anuncio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="canal.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="canal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="listaAnuncio.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="listaAnuncio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="listaCanal.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="listaCanal.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="nodoEntero.cpp" ex="false" tool="1" flavor2="0">
+      <item path="nodoAnuncio.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="nodoEntero.h" ex="false" tool="3" flavor2="0">
+      <item path="nodoAnuncio.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="pilaEnt.cpp" ex="false" tool="1" flavor2="0">
+      <item path="nodoCanal.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="pilaEnt.h" ex="false" tool="3" flavor2="0">
+      <item path="nodoCanal.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -77,19 +95,31 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="listaEnt.cpp" ex="false" tool="1" flavor2="0">
+      <item path="anuncio.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="listaEnt.h" ex="false" tool="3" flavor2="0">
+      <item path="anuncio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="canal.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="canal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="listaAnuncio.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="listaAnuncio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="listaCanal.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="listaCanal.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="nodoEntero.cpp" ex="false" tool="1" flavor2="0">
+      <item path="nodoAnuncio.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="nodoEntero.h" ex="false" tool="3" flavor2="0">
+      <item path="nodoAnuncio.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="pilaEnt.cpp" ex="false" tool="1" flavor2="0">
+      <item path="nodoCanal.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="pilaEnt.h" ex="false" tool="3" flavor2="0">
+      <item path="nodoCanal.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>
