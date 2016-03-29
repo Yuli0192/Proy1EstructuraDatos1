@@ -18,13 +18,13 @@ using namespace std;
 
 class NodoCanal {
 private:
-    Canal *canal; //Elemento de la lista
+    Canal canal; //Elemento de la lista
     NodoCanal *sig; //Siguiente elemento, es el puntero autoreferenciable
     NodoCanal *ant;
 public:
     NodoCanal(); //Constructora
-    Canal * getCanal(void); //Analizadora
-    void setCanal(Canal *canal); //Modificadora
+    Canal getCanal(void); //Analizadora
+    void setCanal(Canal canal); //Modificadora
     NodoCanal * getSig(void); //Analizadora
     NodoCanal * getAnt(void);
     void setSig(NodoCanal *); //Modificadora

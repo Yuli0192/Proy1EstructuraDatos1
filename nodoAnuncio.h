@@ -19,13 +19,13 @@ using namespace std;
 
 class NodoAnuncio {
 private:
-    Anuncio *anuncio; //Elemento de la lista
+    Anuncio anuncio; //Elemento de la lista
     NodoAnuncio *sig; //Siguiente elemento, es el puntero autoreferenciable
     
 public:
     NodoAnuncio(); //Constructora
-    Anuncio *getAnuncio(void); //Analizadora
-   void setAnuncio(Anuncio *anuncio); //Modificadora
+    Anuncio getAnuncio(void); //Analizadora
+   void setAnuncio(Anuncio anuncio); //Modificadora
     NodoAnuncio * getSig(void); //Analizadora
     void setSig(NodoAnuncio *); //Modificadora
 

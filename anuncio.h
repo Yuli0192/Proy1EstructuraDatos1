@@ -22,6 +22,7 @@ private:
     string codigoAnuncio;
     double tiempoDuracion;
 public:
+    Anuncio();
     Anuncio(string codigoEmpresa, string nombreEmpresa, string codigoAnuncio, double tiempoDuracion); //Constructora
     string getCodigoEmpresa(void); //Analizadora
     void setCodigoEmpresa(string codigo); //Modificadora

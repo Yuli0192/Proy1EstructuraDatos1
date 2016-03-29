@@ -14,12 +14,12 @@ NodoCanal::NodoCanal() { //Constructora
     ant = NULL;
 }
 
-void NodoCanal::setCanal(Canal *pcanal) //Modificadora
+void NodoCanal::setCanal(Canal pcanal) //Modificadora
 {
     canal = pcanal;
 }
 
-Canal *NodoCanal::getCanal(void) //Analizadora
+Canal NodoCanal::getCanal(void) //Analizadora
 {
     return canal;
 }

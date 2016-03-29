@@ -7,6 +7,9 @@
 #include <cstddef>
 #include "canal.h"
 
+Canal::Canal(){
+    
+}
 Canal::Canal(int codigoCanal, string nombreCanal, string telefono, double montoMonimo, double tiempoMaximoTransmitir, double tiempoMinimoTransimitir, double costoMinuto) { //Constructora
     setCodigoCanal(codigoCanal);
     setNombreCanal(nombreCanal);
@@ -58,4 +61,12 @@ double Canal::getCostoMinuto(void){ //Analizadora
 }
 void Canal::setCostoMinuto(double costo){ //Modificadora   
     costoMinuto = costo;
+}
+
+ListaAnuncioContratado Canal::getListaAnuncioContratado(void){
+    return listaAnuncioContratado;
+}
+    
+void Canal::setListaAnuncioContratado(ListaAnuncioContratado listaAnuncio){
+    listaAnuncioContratado = listaAnuncio;
 }

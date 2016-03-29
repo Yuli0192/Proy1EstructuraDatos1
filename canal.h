@@ -13,10 +13,12 @@
 #ifndef CANAL_H
 #define CANAL_H
 #include <string>
+#include "listaAnuncioContratado.h"
 using namespace std;
 
 class Canal {
 private:
+    ListaAnuncioContratado listaAnuncioContratado;
     int codigoCanal;
     string nombreCanal;
     string telefono;
@@ -25,6 +27,7 @@ private:
     double tiempoMinimoTransmitir;
     double costoMinuto;
 public:
+    Canal();
     Canal(int codigoCanal, string nombreCanal, string telefono, double montoMonimo, double tiempoMaximoTransmitir, double tiempoMinimoTransimitir, double costoMinuto); //Constructora
     int getCodigoCanal(void); //Analizadora
     void setCodigoCanal(int codigo); //Modificadora
@@ -40,6 +43,8 @@ public:
     void setTiempoMinimoTransmitir(double tiempoMinimo); //Modificadora   
     double getCostoMinuto(void); //Analizadora
     void setCostoMinuto(double costo); //Modificadora   
+    ListaAnuncioContratado getListaAnuncioContratado(void);
+    void setListaAnuncioContratado(ListaAnuncioContratado listaAnuncioContratado);
 };
 
 

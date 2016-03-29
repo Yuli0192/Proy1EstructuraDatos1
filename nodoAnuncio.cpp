@@ -13,12 +13,12 @@ NodoAnuncio::NodoAnuncio() { //Constructora
     sig = NULL;
 }
 
-void NodoAnuncio::setAnuncio(Anuncio *panuncio) //Modificadora
+void NodoAnuncio::setAnuncio(Anuncio panuncio) //Modificadora
 {
     anuncio = panuncio;
 }
 
-Anuncio *NodoAnuncio::getAnuncio(void) //Analizadora
+Anuncio NodoAnuncio::getAnuncio(void) //Analizadora
 {
     return anuncio;
 }

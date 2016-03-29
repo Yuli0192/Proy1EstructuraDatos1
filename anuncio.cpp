@@ -6,6 +6,9 @@
 
 #include "anuncio.h"
 
+Anuncio::Anuncio(){
+    
+}
 Anuncio::Anuncio(string codigoEmpresa, string nombreEmpresa, string codigoAnuncio, double tiempoDuracion) { //Constructora
     
     setCodigoEmpresa(codigoEmpresa);
