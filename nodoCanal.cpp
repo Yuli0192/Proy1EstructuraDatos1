@@ -6,10 +6,12 @@
 
 #include <cstddef>
 #include "nodoCanal.h"
+#include "canal.h"
 
 using namespace std;
 
-NodoCanal::NodoCanal() { //Constructora
+NodoCanal::NodoCanal(Canal pcanal) { //Constructora
+    canal = pcanal;
     sig = NULL;
     ant = NULL;
 }

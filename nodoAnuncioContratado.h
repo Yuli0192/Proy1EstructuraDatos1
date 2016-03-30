@@ -20,13 +20,14 @@ using namespace std;
 
 class NodoAnuncioContratado {
 private:
-    AnuncioContratado *anuncioContratado; //Elemento de la lista
+    AnuncioContratado anuncioContratado; //Elemento de la lista
     NodoAnuncioContratado *sig; //Siguiente elemento, es el puntero autoreferenciable
 
 public:
-    NodoAnuncioContratado(); //Constructora
-    AnuncioContratado *getAnuncioContratado(void); //Analizadora
-    void setAnuncioContratado(AnuncioContratado *anuncio); //Modificadora
+    NodoAnuncioContratado();
+    NodoAnuncioContratado(AnuncioContratado anuncio); //Constructora
+    AnuncioContratado getAnuncioContratado(void); //Analizadora
+    void setAnuncioContratado(AnuncioContratado anuncio); //Modificadora
     NodoAnuncioContratado * getSig(void); //Analizadora
     void setSig(NodoAnuncioContratado *); //Modificadora
 

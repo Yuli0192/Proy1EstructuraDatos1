@@ -5,11 +5,13 @@
  */
 #include <cstddef>
 #include "nodoAnuncio.h"
+#include "anuncio.h"
 
 using namespace std;
 
 
-NodoAnuncio::NodoAnuncio() { //Constructora
+NodoAnuncio::NodoAnuncio(Anuncio panuncio) { //Constructora
+    anuncio = panuncio;
     sig = NULL;
 }
 

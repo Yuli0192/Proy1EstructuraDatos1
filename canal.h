@@ -19,7 +19,7 @@ using namespace std;
 class Canal {
 private:
     ListaAnuncioContratado listaAnuncioContratado;
-    int codigoCanal;
+    string codigoCanal;
     string nombreCanal;
     string telefono;
     double montoMinimoCobrar;
@@ -28,9 +28,9 @@ private:
     double costoMinuto;
 public:
     Canal();
-    Canal(int codigoCanal, string nombreCanal, string telefono, double montoMonimo, double tiempoMaximoTransmitir, double tiempoMinimoTransimitir, double costoMinuto); //Constructora
-    int getCodigoCanal(void); //Analizadora
-    void setCodigoCanal(int codigo); //Modificadora
+    Canal(string codigoCanal, string nombreCanal, string telefono, double montoMonimo, double tiempoMaximoTransmitir, double tiempoMinimoTransimitir, double costoMinuto); //Constructora
+    string getCodigoCanal(void); //Analizadora
+    void setCodigoCanal(string codigo); //Modificadora
     string getNombreCanal(void); //Analizadora
     void setNombreCanal(string nombre); //Modificadora
     string getTelefono(void); //Analizadora

@@ -6,20 +6,22 @@
 
 #include <cstddef>
 #include "nodoAnuncioContratado.h"
+#include "anuncioContratado.h"
 
 using namespace std;
 
 
-NodoAnuncioContratado::NodoAnuncioContratado() { //Constructora
+NodoAnuncioContratado::NodoAnuncioContratado(AnuncioContratado panuncio) { //Constructora
+    anuncioContratado = panuncio;
     sig = NULL;
 }
 
-void NodoAnuncioContratado::setAnuncioContratado(AnuncioContratado *panuncio) //Modificadora
+void NodoAnuncioContratado::setAnuncioContratado(AnuncioContratado panuncio) //Modificadora
 {
     anuncioContratado = panuncio;
 }
 
-AnuncioContratado *NodoAnuncioContratado::getAnuncioContratado(void) //Analizadora
+AnuncioContratado NodoAnuncioContratado::getAnuncioContratado(void) //Analizadora
 {
     return anuncioContratado;
 }

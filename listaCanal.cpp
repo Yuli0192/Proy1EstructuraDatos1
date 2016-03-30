@@ -6,6 +6,7 @@
 
 #include <cstddef>
 #include "listaCanal.h"
+#include "nodoCanal.h"
 
 ListaCanal::ListaCanal(void) { //Constructora
     longitud = 0;
@@ -26,7 +27,19 @@ void ListaCanal::imprimirCanal(int codigoCanal) { //Salida
 
 void ListaCanal::insertarCanal(Canal pcanal) //Modificadora
 {
-   
+    NodoCanal * nuevo = new NodoCanal(pcanal);
+
+    if (nuevo) {//Para verificar que exista memoria
+        if (this->cabeza == NULL) {//Si la cabeza es igual a null
+            cabeza = nuevo;
+        }else{
+            nuevo->setSig(cabeza);
+            cabeza->setAnt(nuevo);
+            cabeza = nuevo;
+        }
+        longitud++;
+        cout << "El canal se insertó exitosamente!" << endl;
+    }
 }
 
 bool ListaCanal::actualizarCobros(void){ //Modificadora
