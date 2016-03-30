@@ -19,10 +19,12 @@ NodoAnuncioContratado *ListaAnuncioContratado::getCabeza()const {
     return this->cabeza;
 }
 
-void ListaAnuncioContratado::insertarAnuncioContratado(AnuncioContratado panuncio) //Modificadora
+bool ListaAnuncioContratado::insertarAnuncioContratado(AnuncioContratado panuncio) //Modificadora
 {
    NodoAnuncioContratado * nuevo = new NodoAnuncioContratado(panuncio);
-    if(nuevo){ //Verifica si hay memoria
+    if(nuevo == NULL){ //Verifica si hay memoria
+        return false;
+    }else{
         if(cabeza == NULL){
             cabeza = nuevo;
         }else{
@@ -30,7 +32,7 @@ void ListaAnuncioContratado::insertarAnuncioContratado(AnuncioContratado panunci
             cabeza = nuevo;
         }
         longitud++;
-        cout << "El anuncio contratado se insertó exitosamente!" << endl;
+        return true;
     }
 }
 

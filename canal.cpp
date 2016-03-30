@@ -6,6 +6,7 @@
 
 #include <cstddef>
 #include "canal.h"
+#include "listaAnuncioContratado.h"
 
 Canal::Canal(){
     
@@ -18,6 +19,7 @@ Canal::Canal(string codigoCanal, string nombreCanal, string telefono, double mon
     setTiempoMaximoTransmitir(tiempoMaximoTransmitir);
     setTiempoMinimoTransmitir(tiempoMinimoTransimitir);
     setCostoMinuto(costoMinuto);
+    listaAnuncioContratado = new ListaAnuncioContratado();
 }
 
 string Canal::getCodigoCanal(void){ //Analizadora
@@ -63,10 +65,10 @@ void Canal::setCostoMinuto(double costo){ //Modificadora
     costoMinuto = costo;
 }
 
-ListaAnuncioContratado Canal::getListaAnuncioContratado(void){
+ListaAnuncioContratado *Canal::getListaAnuncioContratado(void){
     return listaAnuncioContratado;
 }
     
-void Canal::setListaAnuncioContratado(ListaAnuncioContratado listaAnuncio){
+void Canal::setListaAnuncioContratado(ListaAnuncioContratado *listaAnuncio){
     listaAnuncioContratado = listaAnuncio;
 }

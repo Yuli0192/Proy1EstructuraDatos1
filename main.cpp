@@ -21,6 +21,7 @@ using namespace std;
 void mostrarMenu(void);
 void crearCanal(ListaCanal *);
 void crearAnuncio(ListaAnuncio *);
+void incluirAnuncio(ListaCanal *, ListaAnuncio *);
 
 int main(void) {
     cout << "EL CONTRATADOR DE ANUNCIOS" << endl;
@@ -39,6 +40,14 @@ int main(void) {
             case 2:
                 crearAnuncio(listaAnuncio);
                 break;
+            case 5:
+                incluirAnuncio(listaCanal, listaAnuncio);
+                break;
+            case 6:
+                continuar = false;
+                break;
+            default:
+                cout << "Valor inválido..." << endl;
         }
     }
     return 0;
@@ -86,3 +95,10 @@ void crearAnuncio(ListaAnuncio *listaAnuncio){
     listaAnuncio->insertarAnuncio(nuevo);
 }
 
+void incluirAnuncio(ListaCanal *listaCanal, ListaAnuncio *listaAnuncio){
+    string codigoCanal;
+    string codigoAnuncio;
+    cout << "Código del canal donde se incluirá el anuncio: "; cin >> codigoCanal;
+    cout << "Código del anuncio a incluir: "; cin >> codigoAnuncio;
+    listaCanal->incluirAnuncio(codigoCanal, codigoAnuncio, listaAnuncio);
+}

@@ -14,6 +14,8 @@
 #define LISTAENT_H
 #include <iostream>
 #include "nodoCanal.h"  //La clase Lista usa la clase NodoCanal.
+#include "nodoAnuncio.h"
+#include "listaAnuncio.h"
 using namespace std;
 
 class ListaCanal {
@@ -29,7 +31,8 @@ public:
     void imprimirCanal(int codigoCanal); //Salida
     void insertarCanal(Canal canal); //Modificadora
     bool actualizarCobros(void); //Modificadora
-    void incluirAnuncio(int codigoCanal, int codigoAnuncio); //Modificadora
+    bool incluirAnuncio(string, string, ListaAnuncio *); //Modificadora
+    NodoCanal * getNodo(string);
 };
 
 
