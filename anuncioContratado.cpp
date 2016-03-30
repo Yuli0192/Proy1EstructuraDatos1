@@ -4,9 +4,13 @@
  * and open the template in the editor.
  */
 #include "anuncioContratado.h"
+#include "nodoAnuncio.h"
 
-AnuncioContratado::AnuncioContratado(NodoAnuncio *nodoAnuncio) { //Constructora
+AnuncioContratado::AnuncioContratado(){}
+
+AnuncioContratado::AnuncioContratado(NodoAnuncio *nodoAnuncio, string pcodigoAnuncio) { //Constructora
     setNodoAnuncio(nodoAnuncio);
+    setCodigo(pcodigoAnuncio);
     setCostoAnuncio(0);
 }
 

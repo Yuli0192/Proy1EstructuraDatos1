@@ -14,7 +14,7 @@
 #define LISTAANUNCIO_H
 #include <iostream>
 
-#include "NodoAnuncio.h"  //La clase Lista usa la clase NodoCanal.
+#include "nodoAnuncio.h"  //La clase Lista usa la clase NodoCanal.
 using namespace std;
 
 class ListaAnuncio {

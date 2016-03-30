@@ -22,7 +22,7 @@ private:
     NodoCanal *sig; //Siguiente elemento, es el puntero autoreferenciable
     NodoCanal *ant;
 public:
-    NodoCanal(); //Constructora
+    NodoCanal(Canal canal); //Constructora
     Canal getCanal(void); //Analizadora
     void setCanal(Canal canal); //Modificadora
     NodoCanal * getSig(void); //Analizadora

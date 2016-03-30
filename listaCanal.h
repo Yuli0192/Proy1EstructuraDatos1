@@ -13,7 +13,7 @@
 #ifndef LISTAENT_H
 #define LISTAENT_H
 #include <iostream>
-#include "NodoCanal.h"  //La clase Lista usa la clase NodoCanal.
+#include "nodoCanal.h"  //La clase Lista usa la clase NodoCanal.
 using namespace std;
 
 class ListaCanal {

@@ -16,7 +16,7 @@
 
 #include <iostream>
 
-#include "NodoAnuncioContratado.h"  //La clase Lista usa la clase NodoCanal.
+#include "nodoAnuncioContratado.h"  //La clase Lista usa la clase NodoCanal.
 using namespace std;
 
 class ListaAnuncioContratado {

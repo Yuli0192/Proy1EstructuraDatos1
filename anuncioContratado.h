@@ -24,7 +24,8 @@ private:
     double costoAnuncio;
     
 public:
-    AnuncioContratado(NodoAnuncio *nodoAnuncio); //Constructora
+    AnuncioContratado();
+    AnuncioContratado(NodoAnuncio *nodoAnuncio, string); //Constructora
     NodoAnuncio* getNodoAnuncio(void);
     void setNodoAnuncio(NodoAnuncio *nodoAnuncio);
     string getCodigo(void); //Analizadora

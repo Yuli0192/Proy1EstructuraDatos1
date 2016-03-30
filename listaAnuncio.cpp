@@ -5,6 +5,7 @@
  */
 #include <cstddef>
 #include "listaAnuncio.h"
+#include "nodoAnuncio.h"
 
 ListaAnuncio::ListaAnuncio(void) { //Constructora
     longitud = 0;
@@ -21,5 +22,15 @@ NodoAnuncio *ListaAnuncio::getCabeza()const {
 
 void ListaAnuncio::insertarAnuncio(Anuncio panuncio) //Modificadora
 {
-   
+    NodoAnuncio * nuevo = new NodoAnuncio(panuncio);
+    if(nuevo){ //Verifica si hay memoria
+        if(cabeza == NULL){
+            cabeza = nuevo;
+        }else{
+            nuevo->setSig(cabeza);
+            cabeza = nuevo;
+        }
+        longitud++;
+        cout << "El anuncio se insertó exitosamente!" << endl;
+    }
 }

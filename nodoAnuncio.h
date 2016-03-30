@@ -23,7 +23,7 @@ private:
     NodoAnuncio *sig; //Siguiente elemento, es el puntero autoreferenciable
     
 public:
-    NodoAnuncio(); //Constructora
+    NodoAnuncio(Anuncio anuncio); //Constructora
     Anuncio getAnuncio(void); //Analizadora
    void setAnuncio(Anuncio anuncio); //Modificadora
     NodoAnuncio * getSig(void); //Analizadora
