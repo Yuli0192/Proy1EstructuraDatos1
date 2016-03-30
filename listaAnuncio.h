@@ -28,6 +28,7 @@ public:
     void setLongitud(int l); //Modificadora
     void setCabeza(NodoAnuncio *); //Modificadora
     void insertarAnuncio(Anuncio anuncio); //Modificadora
+    NodoAnuncio * getNodo(string);
 };
 
 #endif /* LISTAANUNCIO_H */

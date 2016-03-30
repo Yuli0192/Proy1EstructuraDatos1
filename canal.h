@@ -18,7 +18,7 @@ using namespace std;
 
 class Canal {
 private:
-    ListaAnuncioContratado listaAnuncioContratado;
+    ListaAnuncioContratado *listaAnuncioContratado;
     string codigoCanal;
     string nombreCanal;
     string telefono;
@@ -43,8 +43,8 @@ public:
     void setTiempoMinimoTransmitir(double tiempoMinimo); //Modificadora   
     double getCostoMinuto(void); //Analizadora
     void setCostoMinuto(double costo); //Modificadora   
-    ListaAnuncioContratado getListaAnuncioContratado(void);
-    void setListaAnuncioContratado(ListaAnuncioContratado listaAnuncioContratado);
+    ListaAnuncioContratado *getListaAnuncioContratado(void);
+    void setListaAnuncioContratado(ListaAnuncioContratado *listaAnuncioContratado);
 };
 
 

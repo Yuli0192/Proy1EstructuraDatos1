@@ -29,7 +29,7 @@ public:
     NodoAnuncioContratado * getCabeza(void) const; //Analizadora
     void setLongitud(int l); //Modificadora
     void setCabeza(NodoAnuncio *); //Modificadora
-    void insertarAnuncioContratado(AnuncioContratado anuncio); //Modificadora
+    bool insertarAnuncioContratado(AnuncioContratado anuncio); //Modificadora
 };
 
 

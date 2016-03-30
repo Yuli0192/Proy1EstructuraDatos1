@@ -34,3 +34,14 @@ void ListaAnuncio::insertarAnuncio(Anuncio panuncio) //Modificadora
         cout << "El anuncio se insertó exitosamente!" << endl;
     }
 }
+
+NodoAnuncio *ListaAnuncio::getNodo(string codigoAnuncio){
+    NodoAnuncio *aux = cabeza;
+    while(aux){
+        if(aux->getAnuncio().getCodigoAnuncio() == codigoAnuncio){
+            return aux;
+        }
+        aux = aux->getSig();
+    }
+    return NULL;
+}
