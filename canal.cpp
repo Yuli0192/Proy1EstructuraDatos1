@@ -10,7 +10,7 @@
 Canal::Canal(){
     
 }
-Canal::Canal(int codigoCanal, string nombreCanal, string telefono, double montoMonimo, double tiempoMaximoTransmitir, double tiempoMinimoTransimitir, double costoMinuto) { //Constructora
+Canal::Canal(string codigoCanal, string nombreCanal, string telefono, double montoMonimo, double tiempoMaximoTransmitir, double tiempoMinimoTransimitir, double costoMinuto) { //Constructora
     setCodigoCanal(codigoCanal);
     setNombreCanal(nombreCanal);
     setTelefono(telefono);
@@ -20,10 +20,10 @@ Canal::Canal(int codigoCanal, string nombreCanal, string telefono, double montoM
     setCostoMinuto(costoMinuto);
 }
 
-int Canal::getCodigoCanal(void){ //Analizadora
+string Canal::getCodigoCanal(void){ //Analizadora
     return codigoCanal;
 }
-void Canal::setCodigoCanal(int codigo){ //Modificadora
+void Canal::setCodigoCanal(string codigo){ //Modificadora
     codigoCanal = codigo;
 }
 string Canal::getNombreCanal(void){ //Analizadora
