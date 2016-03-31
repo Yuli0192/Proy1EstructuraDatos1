@@ -28,11 +28,25 @@ bool ListaAnuncioContratado::insertarAnuncioContratado(AnuncioContratado panunci
         if(cabeza == NULL){
             cabeza = nuevo;
         }else{
-            nuevo->setSig(cabeza);
-            cabeza = nuevo;
+            if(!verificarRepetido(panuncio.getCodigo())){
+                nuevo->setSig(cabeza);
+                cabeza = nuevo;
+                longitud++;
+                return true;
+            }
+            return false;
         }
-        longitud++;
-        return true;
     }
+}
+
+bool ListaAnuncioContratado::verificarRepetido(string pcodigo){
+    NodoAnuncioContratado *aux = cabeza;
+    while(aux){
+        if(aux->getAnuncioContratado().getCodigo() == pcodigo){
+            return true;
+        }
+        aux = aux->getSig();
+    }
+    return false;
 }
 
