@@ -31,11 +31,12 @@ bool ListaAnuncioContratado::insertarAnuncioContratado(AnuncioContratado panunci
             if(!verificarRepetido(panuncio.getCodigo())){
                 nuevo->setSig(cabeza);
                 cabeza = nuevo;
-                longitud++;
-                return true;
+            }else{
+                return false;
             }
-            return false;
         }
+        longitud++;
+        return true;
     }
 }
 
