@@ -29,10 +29,11 @@ public:
     void setLongitud(int l); //Modificadora
     void setCabeza(NodoCanal *); //Modificadora
     void imprimirCanal(int codigoCanal); //Salida
-    void insertarCanal(Canal canal); //Modificadora
+    bool insertarCanal(Canal canal); //Modificadora
     bool actualizarCobros(void); //Modificadora
     bool incluirAnuncio(string, string, ListaAnuncio *); //Modificadora
     NodoCanal * getNodo(string);
+    bool verificarRepetido(Canal);
 };
 
 

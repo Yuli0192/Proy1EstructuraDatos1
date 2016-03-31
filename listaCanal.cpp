@@ -28,7 +28,7 @@ void ListaCanal::imprimirCanal(int codigoCanal) { //Salida
 
 }
 
-void ListaCanal::insertarCanal(Canal pcanal) //Modificadora
+bool ListaCanal::insertarCanal(Canal pcanal) //Modificadora
 {
     NodoCanal * nuevo = new NodoCanal(pcanal);
 
@@ -36,13 +36,30 @@ void ListaCanal::insertarCanal(Canal pcanal) //Modificadora
         if (this->cabeza == NULL) {//Si la cabeza es igual a null
             cabeza = nuevo;
         }else{
-            nuevo->setSig(cabeza);
-            cabeza->setAnt(nuevo);
-            cabeza = nuevo;
+            if(!verificarRepetido(pcanal)){
+                nuevo->setSig(cabeza);
+                cabeza->setAnt(nuevo);
+                cabeza = nuevo;
+            }else{
+                cout << "El código o nombre especificado ya existe..." << endl;
+                return false;
+            }
         }
         longitud++;
         cout << "El canal se insertó exitosamente!" << endl;
+        return true;
     }
+}
+
+bool ListaCanal::verificarRepetido(Canal pcanal){
+    NodoCanal *aux = cabeza;
+    while(aux){
+        if(aux->getCanal().getCodigoCanal() == pcanal.getCodigoCanal() || aux->getCanal().getNombreCanal() == pcanal.getNombreCanal()){
+            return true;
+        }
+        aux = aux->getSig();
+    }
+    return false;
 }
 
 bool ListaCanal::actualizarCobros(void){ //Modificadora

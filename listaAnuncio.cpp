@@ -20,18 +20,24 @@ NodoAnuncio *ListaAnuncio::getCabeza()const {
     return this->cabeza;
 }
 
-void ListaAnuncio::insertarAnuncio(Anuncio panuncio) //Modificadora
+bool ListaAnuncio::insertarAnuncio(Anuncio panuncio) //Modificadora
 {
     NodoAnuncio * nuevo = new NodoAnuncio(panuncio);
     if(nuevo){ //Verifica si hay memoria
         if(cabeza == NULL){
             cabeza = nuevo;
         }else{
-            nuevo->setSig(cabeza);
-            cabeza = nuevo;
+            if(!verificarRepetido(panuncio)){
+                nuevo->setSig(cabeza);
+                cabeza = nuevo;
+            }else{
+                cout << "El código del anuncio ya existe..." << endl;
+                return false;
+            }
         }
         longitud++;
         cout << "El anuncio se insertó exitosamente!" << endl;
+        return true;
     }
 }
 
@@ -44,4 +50,15 @@ NodoAnuncio *ListaAnuncio::getNodo(string codigoAnuncio){
         aux = aux->getSig();
     }
     return NULL;
+}
+
+bool ListaAnuncio::verificarRepetido(Anuncio panuncio){
+    NodoAnuncio *aux = cabeza;
+    while(aux){
+        if(aux->getAnuncio().getCodigoAnuncio() == panuncio.getCodigoAnuncio()){
+            return true;
+        }
+        aux = aux->getSig();
+    }
+    return false;
 }

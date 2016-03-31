@@ -27,8 +27,9 @@ public:
     NodoAnuncio * getCabeza(void) const; //Analizadora
     void setLongitud(int l); //Modificadora
     void setCabeza(NodoAnuncio *); //Modificadora
-    void insertarAnuncio(Anuncio anuncio); //Modificadora
+    bool insertarAnuncio(Anuncio anuncio); //Modificadora
     NodoAnuncio * getNodo(string);
+    bool verificarRepetido(Anuncio);
 };
 
 #endif /* LISTAANUNCIO_H */

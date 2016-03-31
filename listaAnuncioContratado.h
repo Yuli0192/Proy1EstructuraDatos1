@@ -30,6 +30,7 @@ public:
     void setLongitud(int l); //Modificadora
     void setCabeza(NodoAnuncio *); //Modificadora
     bool insertarAnuncioContratado(AnuncioContratado anuncio); //Modificadora
+    bool verificarRepetido(string);
 };
 
 
