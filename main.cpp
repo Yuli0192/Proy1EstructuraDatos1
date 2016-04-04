@@ -22,6 +22,7 @@ void mostrarMenu(void);
 void crearCanal(ListaCanal *);
 void crearAnuncio(ListaAnuncio *);
 void incluirAnuncio(ListaCanal *, ListaAnuncio *);
+void actualizarCobros(ListaCanal *listaCanal);
 
 int main(void) {
     cout << "EL CONTRATADOR DE ANUNCIOS" << endl;
@@ -39,6 +40,9 @@ int main(void) {
                 break;
             case 2:
                 crearAnuncio(listaAnuncio);
+                break;
+            case 3:
+                actualizarCobros(listaCanal);
                 break;
             case 5:
                 incluirAnuncio(listaCanal, listaAnuncio);
@@ -101,4 +105,8 @@ void incluirAnuncio(ListaCanal *listaCanal, ListaAnuncio *listaAnuncio){
     cout << "Código del canal donde se incluirá el anuncio: "; cin >> codigoCanal;
     cout << "Código del anuncio a incluir: "; cin >> codigoAnuncio;
     listaCanal->incluirAnuncio(codigoCanal, codigoAnuncio, listaAnuncio);
+}
+
+void actualizarCobros(ListaCanal *listaCanal){
+    listaCanal->actualizarCobros();
 }

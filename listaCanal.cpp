@@ -54,7 +54,7 @@ bool ListaCanal::insertarCanal(Canal pcanal) //Modificadora
 bool ListaCanal::verificarRepetido(Canal pcanal){
     NodoCanal *aux = cabeza;
     while(aux){
-        if(aux->getCanal().getCodigoCanal() == pcanal.getCodigoCanal() || aux->getCanal().getNombreCanal() == pcanal.getNombreCanal()){
+        if(aux->getCanal().getCodigoCanal()==pcanal.getCodigoCanal()){
             return true;
         }
         aux = aux->getSig();
@@ -63,8 +63,45 @@ bool ListaCanal::verificarRepetido(Canal pcanal){
 }
 
 bool ListaCanal::actualizarCobros(void){ //Modificadora
+    NodoCanal *nodoCanal = cabeza;
+    Canal canal;
+    double tiempoDuracionAnuncio;
+    double tiempoMinimoCanal;
+    double tiempoMaximoCanal;
+    double minimoACobrarDeCanal;
+    double costoPorMinuto;
+    double totalACobrar;
+    ListaAnuncioContratado *nodoListaAnuncioContratado;
+    ListaAnuncioContratado listaAnuncioContratado;
+    while(nodoCanal){
+        totalACobrar = 0;
+        canal = nodoCanal->getCanal();
+        tiempoMinimoCanal = canal.getTiempoMinimoTransmitir();
+        tiempoMaximoCanal = canal.getTiempoMaximoTransmitir();
+        nodoListaAnuncioContratado = canal.getListaAnuncioContratado();
+        minimoACobrarDeCanal = canal.getMontoMinimoCobrar();
+        costoPorMinuto = canal.getCostoMinuto();
+        NodoAnuncioContratado *nodoAnuncioContratado = listaAnuncioContratado.getCabeza();
+        while(nodoAnuncioContratado){
+            AnuncioContratado anuncioContratado = nodoAnuncioContratado->getAnuncioContratado();
+            NodoAnuncio *nodoAnuncio = anuncioContratado.getNodoAnuncio();
+            Anuncio anuncio = nodoAnuncio->getAnuncio();
+            tiempoDuracionAnuncio = anuncio.getTiempoDuracion();
+            if(tiempoDuracionAnuncio<tiempoMinimoCanal){
+                totalACobrar += minimoACobrarDeCanal;
+            }else if (tiempoDuracionAnuncio>tiempoMaximoCanal){
+                totalACobrar += ((tiempoDuracionAnuncio-tiempoMaximoCanal)/30)*2*costoPorMinuto+(tiempoMaximoCanal/60)*costoPorMinuto;
+            }else{
+                totalACobrar += (tiempoMaximoCanal/60)*costoPorMinuto;
+            }
+            nodoAnuncioContratado = nodoAnuncioContratado->getSig();
+        }
+        canal.setTotalACobrar(totalACobrar);
+        nodoCanal = nodoCanal->getSig();
+    }
     return true;
 }
+
 bool ListaCanal::incluirAnuncio(string codigoCanal, string codigoAnuncio, ListaAnuncio *listaAnuncio){ //Modificadora
     NodoCanal *nodoCanal = this->getNodo(codigoCanal);
     if(nodoCanal){

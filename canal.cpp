@@ -72,3 +72,11 @@ ListaAnuncioContratado *Canal::getListaAnuncioContratado(void){
 void Canal::setListaAnuncioContratado(ListaAnuncioContratado *listaAnuncio){
     listaAnuncioContratado = listaAnuncio;
 }
+
+void Canal::setTotalACobrar(double ptotalACobrar){//Modificadora 
+    totalACobrar = ptotalACobrar;
+}
+
+double Canal::getTotalACobrar(){//Analizadora
+    return totalACobrar;
+}
