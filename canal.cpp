@@ -5,7 +5,12 @@
  */
 
 #include <cstddef>
+#include <iostream>
 #include "canal.h"
+#include "listaAnuncio.h"
+#include "nodoCanal.h"
+#include "anuncioContratado.h"
+#include "nodoAnuncio.h"
 
 Canal::Canal(){
     
@@ -69,4 +74,25 @@ ListaAnuncioContratado Canal::getListaAnuncioContratado(void){
     
 void Canal::setListaAnuncioContratado(ListaAnuncioContratado listaAnuncio){
     listaAnuncioContratado = listaAnuncio;
+}
+
+void Canal::imprimirCanal(void) {
+    ListaAnuncioContratado listaAnuncios;
+    if (listaAnuncios.getCabeza()) {
+        int numAnuncios = listaAnuncios.getLongitud();
+        NodoAnuncioContratado *nodoAnuncioContratado = listaAnuncios.getCabeza();
+        cout << "Anuncios del canal:" << endl;
+        while (nodoAnuncioContratado) {
+            AnuncioContratado *anuncioContratado = nodoAnuncioContratado->getAnuncioContratado();
+            NodoAnuncio *nodoAnuncio = anuncioContratado->getNodoAnuncio();
+            Anuncio anuncio = nodoAnuncio->getAnuncio();
+            cout << "Codigo empresa:" << anuncio.getCodigoEmpresa() << endl;
+            cout << "Nombre empresa:" << anuncio.getNombreEmpresa() << endl;
+            cout << "Codigo anuncio:" << anuncio.getCodigoAnuncio() << endl;
+            cout << "Costo anuncio:" << anuncioContratado->getCostoAnuncio() << endl;
+            cout << endl;
+
+            nodoAnuncioContratado = nodoAnuncioContratado->getSig();
+        }
+    }
 }

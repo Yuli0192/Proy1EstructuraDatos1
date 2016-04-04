@@ -45,6 +45,7 @@ public:
     void setCostoMinuto(double costo); //Modificadora   
     ListaAnuncioContratado getListaAnuncioContratado(void);
     void setListaAnuncioContratado(ListaAnuncioContratado listaAnuncioContratado);
+    void imprimirCanal(void);
 };
 
 
