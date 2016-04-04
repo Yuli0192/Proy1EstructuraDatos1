@@ -26,6 +26,7 @@ private:
     double tiempoMaximoTransmitir;
     double tiempoMinimoTransmitir;
     double costoMinuto;
+    double totalACobrar;
 public:
     Canal();
     Canal(string codigoCanal, string nombreCanal, string telefono, double montoMonimo, double tiempoMaximoTransmitir, double tiempoMinimoTransimitir, double costoMinuto); //Constructora
@@ -41,10 +42,12 @@ public:
     void setTiempoMaximoTransmitir(double tiempoMaximo); //Modificadora   
     double getTiempoMinimoTransmitir(void); //Analizadora
     void setTiempoMinimoTransmitir(double tiempoMinimo); //Modificadora   
-    double getCostoMinuto(void); //Analizadora
+    double getCostoMinuto(void); ////Analizadora  
     void setCostoMinuto(double costo); //Modificadora   
     ListaAnuncioContratado *getListaAnuncioContratado(void);
     void setListaAnuncioContratado(ListaAnuncioContratado *listaAnuncioContratado);
+    void setTotalACobrar(double totalACobrar);//Modificadora  
+    double getTotalACobrar(void);////Analizadora  
 };
 
 

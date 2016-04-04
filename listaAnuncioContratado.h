@@ -21,6 +21,7 @@ using namespace std;
 
 class ListaAnuncioContratado {
 private:
+    double montonACobrar; //Total a cobrar por todos los anuncios contratados
     int longitud; //Longitud de la lista
     NodoAnuncioContratado *cabeza; //Puntero al primero de la lista
 public:
