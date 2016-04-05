@@ -24,8 +24,9 @@ NodoCanal *ListaCanal::getCabeza()const {
     return this->cabeza;
 }
 
-void ListaCanal::imprimirCanal() { //Salida
-    
+void ListaCanal::imprimirCanal(string codigo) { //Salida
+    NodoCanal *aux = getNodo(codigo);
+    aux->getCanal().imprimirCanal();
 }
 
 bool ListaCanal::insertarCanal(Canal pcanal) //Modificadora
@@ -65,23 +66,24 @@ bool ListaCanal::verificarRepetido(Canal pcanal){
 bool ListaCanal::actualizarCobros(void){ //Modificadora
     NodoCanal *nodoCanal = cabeza;
     Canal canal;
-    double tiempoDuracionAnuncio;
-    double tiempoMinimoCanal;
-    double tiempoMaximoCanal;
-    double minimoACobrarDeCanal;
-    double costoPorMinuto;
-    double totalACobrar;
-    ListaAnuncioContratado *nodoListaAnuncioContratado;
-    ListaAnuncioContratado listaAnuncioContratado;
+    double tiempoDuracionAnuncio = 0;
+    double tiempoMinimoCanal = 0;
+    double tiempoMaximoCanal = 0;
+    double minimoACobrarDeCanal = 0;
+    double costoPorMinuto = 0;
+    double totalACobrar = 0;
+    //ListaAnuncioContratado *nodoListaAnuncioContratado;
+    ListaAnuncioContratado *listaAnuncioContratado;
+    //listaAnuncioContratado = nodoCanal->getCanal().getListaAnuncioContratado();
     while(nodoCanal){
         totalACobrar = 0;
         canal = nodoCanal->getCanal();
         tiempoMinimoCanal = canal.getTiempoMinimoTransmitir();
         tiempoMaximoCanal = canal.getTiempoMaximoTransmitir();
-        nodoListaAnuncioContratado = canal.getListaAnuncioContratado();
+        listaAnuncioContratado = canal.getListaAnuncioContratado();
         minimoACobrarDeCanal = canal.getMontoMinimoCobrar();
         costoPorMinuto = canal.getCostoMinuto();
-        NodoAnuncioContratado *nodoAnuncioContratado = listaAnuncioContratado.getCabeza();
+        NodoAnuncioContratado *nodoAnuncioContratado = listaAnuncioContratado->getCabeza();
         while(nodoAnuncioContratado){
             AnuncioContratado anuncioContratado = nodoAnuncioContratado->getAnuncioContratado();
             NodoAnuncio *nodoAnuncio = anuncioContratado.getNodoAnuncio();
@@ -99,6 +101,7 @@ bool ListaCanal::actualizarCobros(void){ //Modificadora
         canal.setTotalACobrar(totalACobrar);
         nodoCanal = nodoCanal->getSig();
     }
+    cout << "Los cobros han sido actualizados!" << endl;
     return true;
 }
 
@@ -116,10 +119,10 @@ bool ListaCanal::incluirAnuncio(string codigoCanal, string codigoAnuncio, ListaA
             cout << "El anuncio especificado ya existe..." << endl;
             return false;
         }
-        cout << "El anuncio especificado no existe..." << endl;
+        cout << "El anuncio especificado no existe... Crearlo primero" << endl;
         return false;
     }
-    cout << "El canal especificado no existe..." << endl;
+    cout << "El canal especificado no existe... Crearlo primero" << endl;
     return false;
 }
 

@@ -87,10 +87,8 @@ double Canal::getTotalACobrar(){//Analizadora
 }
 
 void Canal::imprimirCanal() {
-    ListaAnuncioContratado listaAnuncios;
-    if (listaAnuncios.getCabeza()) {
-        int numAnuncios = listaAnuncios.getLongitud();
-        NodoAnuncioContratado *nodoAnuncioContratado = listaAnuncios.getCabeza();
+    if (getListaAnuncioContratado()->getCabeza()) {
+        NodoAnuncioContratado *nodoAnuncioContratado = getListaAnuncioContratado()->getCabeza();
         cout << "Anuncios del canal:" << endl;
         while (nodoAnuncioContratado) {
             AnuncioContratado anuncioContratado = nodoAnuncioContratado->getAnuncioContratado();

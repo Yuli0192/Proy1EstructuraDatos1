@@ -23,6 +23,7 @@ void crearCanal(ListaCanal *);
 void crearAnuncio(ListaAnuncio *);
 void incluirAnuncio(ListaCanal *, ListaAnuncio *);
 void actualizarCobros(ListaCanal *listaCanal);
+void imprimirCanal(ListaCanal *);
 
 int main(void) {
     cout << "EL CONTRATADOR DE ANUNCIOS" << endl;
@@ -45,7 +46,7 @@ int main(void) {
                 actualizarCobros(listaCanal);
                 break;
             case 4:
-                listaCanal->imprimirCanal();
+                imprimirCanal(listaCanal);
                 break;   
             case 5:
                 incluirAnuncio(listaCanal, listaAnuncio);
@@ -74,10 +75,10 @@ void crearCanal(ListaCanal *listaCanal){
     string codigoCanal;
     string nombreCanal;
     string telefono;
-    double montoMonimo;
-    double tiempoMaximoTransmitir;
-    double tiempoMinimoTransimitir;
-    double costoMinuto;
+    double montoMonimo = 0;
+    double tiempoMaximoTransmitir = 0;
+    double tiempoMinimoTransimitir = 0;
+    double costoMinuto = 0;
     cout << "Código del canal: "; cin >> codigoCanal;
     cout << "Nombre del canal: "; cin >> nombreCanal;
     cout << "Teléfono: "; cin >> telefono;
@@ -93,7 +94,7 @@ void crearAnuncio(ListaAnuncio *listaAnuncio){
     string codigoEmpresa;
     string nombreEmpresa;
     string codigoAnuncio;
-    double tiempoDuracion;
+    double tiempoDuracion = 0;
     cout << "Código de la empresa: "; cin >> codigoEmpresa;
     cout << "Nombre de la empresa: "; cin >> nombreEmpresa;
     cout << "Código del anuncio: "; cin >> codigoAnuncio;
@@ -112,4 +113,10 @@ void incluirAnuncio(ListaCanal *listaCanal, ListaAnuncio *listaAnuncio){
 
 void actualizarCobros(ListaCanal *listaCanal){
     listaCanal->actualizarCobros();
+}
+
+void imprimirCanal(ListaCanal *listaCanal){
+    string codigo;
+    cout << "Ingrese el código del canal: "; cin >> codigo;
+    listaCanal->imprimirCanal(codigo);
 }

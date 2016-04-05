@@ -28,7 +28,7 @@ public:
     NodoCanal * getCabeza(void) const; //Analizadora
     void setLongitud(int l); //Modificadora
     void setCabeza(NodoCanal *); //Modificadora
-    void imprimirCanal(); //Salida
+    void imprimirCanal(string); //Salida
     bool insertarCanal(Canal canal); //Modificadora
     bool actualizarCobros(void); //Modificadora
     bool incluirAnuncio(string, string, ListaAnuncio *); //Modificadora
