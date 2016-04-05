@@ -44,6 +44,9 @@ int main(void) {
             case 3:
                 actualizarCobros(listaCanal);
                 break;
+            case 4:
+                listaCanal->imprimirCanal();
+                break;   
             case 5:
                 incluirAnuncio(listaCanal, listaAnuncio);
                 break;

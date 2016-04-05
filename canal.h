@@ -47,7 +47,8 @@ public:
     ListaAnuncioContratado *getListaAnuncioContratado(void);
     void setListaAnuncioContratado(ListaAnuncioContratado *listaAnuncioContratado);
     void setTotalACobrar(double totalACobrar);//Modificadora  
-    double getTotalACobrar(void);////Analizadora  
+    double getTotalACobrar(void);////Analizadora
+    void imprimirCanal(void);
 };
 
 

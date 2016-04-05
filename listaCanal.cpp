@@ -24,8 +24,8 @@ NodoCanal *ListaCanal::getCabeza()const {
     return this->cabeza;
 }
 
-void ListaCanal::imprimirCanal(int codigoCanal) { //Salida
-
+void ListaCanal::imprimirCanal() { //Salida
+    
 }
 
 bool ListaCanal::insertarCanal(Canal pcanal) //Modificadora

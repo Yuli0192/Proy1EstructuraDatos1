@@ -7,6 +7,11 @@
 #include <cstddef>
 #include "canal.h"
 #include "listaAnuncioContratado.h"
+#include <iostream>
+#include "listaAnuncio.h"
+#include "nodoCanal.h"
+#include "anuncioContratado.h"
+#include "nodoAnuncio.h"
 
 Canal::Canal(){
     
@@ -79,4 +84,25 @@ void Canal::setTotalACobrar(double ptotalACobrar){//Modificadora
 
 double Canal::getTotalACobrar(){//Analizadora
     return totalACobrar;
+}
+
+void Canal::imprimirCanal() {
+    ListaAnuncioContratado listaAnuncios;
+    if (listaAnuncios.getCabeza()) {
+        int numAnuncios = listaAnuncios.getLongitud();
+        NodoAnuncioContratado *nodoAnuncioContratado = listaAnuncios.getCabeza();
+        cout << "Anuncios del canal:" << endl;
+        while (nodoAnuncioContratado) {
+            AnuncioContratado anuncioContratado = nodoAnuncioContratado->getAnuncioContratado();
+            NodoAnuncio *nodoAnuncio = anuncioContratado.getNodoAnuncio();
+            Anuncio anuncio = nodoAnuncio->getAnuncio();
+            cout << "Codigo empresa:" << anuncio.getCodigoEmpresa() << endl;
+            cout << "Nombre empresa:" << anuncio.getNombreEmpresa() << endl;
+            cout << "Codigo anuncio:" << anuncio.getCodigoAnuncio() << endl;
+            cout << "Costo anuncio:" << anuncioContratado.getCostoAnuncio() << endl;
+            cout << endl;
+
+            nodoAnuncioContratado = nodoAnuncioContratado->getSig();
+        }
+    }
 }
